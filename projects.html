@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Projects</title>
+    <link rel="stylesheet" href="Fonts/css/all.css">
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+body{
+    color: #ededed;
+    background-color: #0c2875;
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+.logo{
+    position: relative;
+    font-size: 40px;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    cursor:pointer;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+}
+.navbar a{
+    display: inline-block;
+    font-size: 25px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: .3s;
+    opacity: 0;
+    animation: slideTop .5s ease forwards;
+    animation-delay: calc(2s * var(--i));
+}
+.navbar a:hover{
+    color: #0ef;
+}
+h1{
+    font-size: 100px;
+    margin-top: 100px;
+    margin-left: 450px;
+}
+h1 span{
+    color: #0ef;
+}
+span{
+    color: #0ef;
+}
+p{
+    font-size: 60px;
+    font-weight: 600;
+    margin-top: 50px;
+    margin-left: 450px;
+}
+li{
+    display: block;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    /* height: 40px; */
+    background: transparent;
+    text-decoration: none;
+    /* border: 2px solid #0ef; */
+    /* border-radius: 10px; */
+    font-size: 20px;
+    color: #0ef;
+    text-decoration: none;
+    margin: 30px 15px 30px 500px;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: calc(2s * var(--i));
+    transition: .1s ease;
+}
+li a{
+    text-decoration: none;
+    color: #0ef;
+}
+li a:hover{
+    text-decoration: underline;
+}
+section p{
+    font-size: 60px;
+    font-weight: 600;
+    margin-top: 50px;
+    margin-left: 450px;
+}
+section h2{
+    font-size: 60px;
+    font-weight: 600;
+    margin-top: 50px;
+    margin-left: 450px;
+}
+.contact{
+    display: block;
+    align-items: center;
+    gap: 3rem;
+    padding: 30px;
+    margin-top: 130px;
+}
+.contact-text h2{
+    font-size: 60px;
+    font-weight: 600;
+    margin-top: 50px;
+    margin-left: 450px;
+}
+.contact-text h2 span{
+    color: #0ef;
+}
+.contact-text h4{
+    color: rgb(228, 228, 228);
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.contact-list{
+    margin-bottom: 3rem;
+}
+.contact-list li{
+    margin-left: 10px;
+    margin-bottom: 10px;
+    display: flex;
+}
+.contact-list i{
+    display: inline-flex;
+    color: #0ef;
+    font-size: 20px;
+    font-weight: 600;
+    transition: all .40s ease;
+}
+.contact-list li a:hover{
+    transform: scale(1.01) translateY(-5px);
+    color: #0ef;
+}
+.contact-icons i{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    text-decoration: none;
+    border: 2px solid #0ef;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #0ef;
+    text-decoration: none;
+    margin: 30px 15px 30px 0;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: calc(2s * var(--i));
+    transition: .5s ease;
+}
+.contact-icons i:hover{
+    background: #0ef;
+    color: #000000;
+    box-shadow: 0 0 20px #0ef;
+}
+.last-text p{
+    font-size: 20px;
+    font-weight: 300;
+    margin-top: 70px;
+}
+.top{
+    position: fixed;
+    bottom: 2.1rem;
+    right: 2.1rem;
+}
+.top i{
+    color: #000000;
+    background: #0ef;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 0.5rem;
+}
+
+
+@keyframes slideRight{
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+@keyframes slideLeft{
+    0%{
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+@keyframes slideTop{
+    0%{
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+@keyframes slideBottom{
+    0%{
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+    </style>
+</head>
+<body>
+    <header class="logo">
+        <a href="index.html" class="logo">Portfolio</a>
+
+        <nav class="navbar">
+            <a href="#web" style="--i:1" class="active">Websites</a>
+            <a href="#apps" style="--i:2">Apps</a>
+            <a href="#games" style="--i:3">Games</a>
+            <a href="#contact" style="--i:5">Contact</a>
+        </nav>
+    </header>
+
+    <h1>MY <span class=".<Projects href="#" style="--i:6">Projects</span></h1>
+    <section class="web">
+        <p>UI/UX <span>Websites</span>
+            <li><a href="Airline Website/index.html" style="--i:6">Airplane Website</a></li>
+            <li><a href="Apple Vision website/index.html" style="--i:6">Apple Vision Website</a></li>
+            <li><a href="Covid-19 website/index.html" style="--i:6">Covid-19 Website</a></li>
+            <li><a href="Cynthia Ugwu/index.html" style="--i:6">Cynthia Ugwu</a></li>
+            <li><a href="DJI/index.html" style="--i:6">DJI</a></li>
+            <li><a href="Food website/index.html" style="--i:6">Food Website</a></li>
+            <li><a href="Glass website/index.html" style="--i:6">Glass Website</a></li>
+            <li><a href="Hotel website/index.html" style="--i:6">Hotel Website</a></li>
+            <li><a href="Login Form 1/index.html" style="--i:6">Login Form</a></li>
+            <li><a href="Lock Screen Phone/index.html" style="--i:6">Lock Screen Phone</a></li>
+            <li><a href="Minimalist website/index.html" style="--i:6">Minimalist Website</a></li>
+            <li><a href="Mordern Clothing website/index.html" style="--i:6">Mordern Clothing Website</a></li>
+            <li><a href="Netflix Login Page/index.html" style="--i:6">Netflix Login Page</a></li>
+            <li><a href="Offer Ribbon/offer.html" style="--i:6">Offer Ribbon</a></li>
+            <li><a href="Parallax Site-Purple/index.html" style="--i:6">Purple Parallax Website</a></li>
+            <li><a href="Pepsi/index.html" style="--i:6">Pepsi Website</a></li>
+            <li><a href="Pixology/index.html" style="--i:6">Pixology</a></li>
+            <li><a href="Podcast website/index.html" style="--i:6">Podcast Website</a></li>
+            <li><a href="Portfolio/index.html" style="--i:6">First Portfolio Site</a></li>
+            <li><a href="Portfolio Site/index.html" style="--i:6">Second Portfolio Site</a></li>
+            <li><a href="Profile Card/profilecard.html" style="--i:6">Profile Card</a></li>
+            <li><a href="Resturant Website1/index.html" style="--i:6">Resturant Website</a></li>
+            <li><a href="Signup Page/signup.html" style="--i:6">Signup Page</a></li>
+            <li><a href="Simple CSS Waves/index.html" style="--i:6">SSimple CSS Waves</a></li>
+            <li><a href="Sofa Product Page/index.html" style="--i:6">Sofa Product Page</a></li>
+             <li><a href="Spain Collections/index.html" style="--i:6">Spain Collections</a></li>
+            <li><a href="Spotify Website/index.html" style="--i:6">Spotify</a></li>
+            <li><a href="Woodex/index.html" style="--i:6">Woodex</a></li>
+            <li><a href="Wren/index.html" style="--i:6">Wren</a></li>
+            <li><a href="Youtube Similar/index.html" style="--i:6">Youtube Clone Site</a></li>
+            <li><a href="Zelt/index.html" style="--i:6">Zelt</a></li>
+        </p>
+    </section>
+
+    <section class="apps" id="apps">
+        <p>Web <span>Applications</span>
+            <li><a href="Animated Progress Bar/Progressbar.html" style="--i:6">Animated Progress Bar</a></li>
+            <li><a href="App Menu With Lock Screen/index.html" style="--i:6">App Menu With Lock Screen</a></li>
+            <li><a href="Card Slider/index.html" style="--i:6">Card Slider</a></li>
+            <li><a href="Chatbot/index.html" style="--i:6">Chatbot</a></li>
+            <li><a href="Clock/index.html" style="--i:6">Clock</a></li>
+            <li><a href="Colour changing shiny loader/Loader.html" style="--i:6">Colour Changing Loader</a></li>
+            <li><a href="Confetti Button/index.html" style="--i:6">Confetti Button</a></li>
+            <li><a href="Emoji/Emoji.html" style="--i:6">Emoji</a></li>
+            <li><a href="Fire Effect/index.html" style="--i:6">Fire Effect</a></li>
+            <li><a href="Futuristic Card Effect/index.html" style="--i:6">Futuristic Card Effect</a></li>
+            <li><a href="Google Loading Screen/index.html" style="--i:6">Google Loading Screen</a></li>
+            <li><a href="Hacked Text Effect/index.html" style="--i:6">Hacked Text Effect</a></li>
+            <li><a href="Image Gallery Search/index.html" style="--i:6">Image Gallery Search</a></li>
+            <li><a href="Image Slider/index.html" style="--i:6">Image Slider</a></li>
+            <li><a href="Notes App/index.html" style="--i:6">Notes App</a></li>
+            <li><a href="SearchBox1/Search.html" style="--i:6">Search Box</a></li>
+            <li><a href="SearchBox2-Advanced/Search2.html" style="--i:6">Search Box Advanced</a></li>
+            <li><a href="Text to  Speech Simple/index.html" style="--i:6">Text to Speech</a></li>
+            <li><a href="Toast Notification/index.html" style="--i:6">Toast Notification</a></li>
+            <li><a href="Typing Effect/index.html" style="--i:6">Typing Effect</a></li>
+            <li><a href="Validation Starter/index.html" style="--i:6">Validation Starter</a></li>
+            <li><a href="Voyager Slider/index.html" style="--i:6">Voyager Slider</a></li>
+            <li><a href="Weather App/index.html" style="--i:6">Weather App</a></li>
+            <li><a href="Windows 11/index.html" style="--i:6">Windows 11 </a></li>
+            <li><a href="Winx.com Mailbox Subscription Workflow/index.html" style="--i:6">Winx.com Mailbox Subscription</a></li>
+        </p>
+    </section>
+
+    <section class="games" id="games">
+        <p>Web <span>Games</span>
+            <li><a href="Guess the Number/index.html" style="--i:6">Guess The Number</a></li>
+            <li><a href="Quiz/index.html" style="--i:6">Quiz App</a></li>
+            <li><a href="Rock Paper Scissors/index.html" style="--i:6">Rock Paper Scissors</a></li>
+            <li><a href="Tic Tac Toe/index.html" style="--i:6">Tic Tac Toe</a></li>
+            <li><a href="Typing Speed/index.html" style="--i:6">Typing Speed </a></li>
+        </p>
+    </section>
+    <section class="contact" id="contact">
+        <div class="contact-text">
+            <h2>Contact <span>Me</span></h2>
+                  
+                  <div class="contact-icons">
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                  </div>
+        </div>
+    </section>
+
+    <div class="last-text">
+        <p>Developed with love by Victor Sunday &copy; 2023</p>
+    </div>
+    <a href="" class="top"><i class="fa-solid fa-arrow-up"></i></a>
+
+</body>
+</html>
